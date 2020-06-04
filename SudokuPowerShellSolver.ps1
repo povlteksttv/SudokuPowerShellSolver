@@ -54,7 +54,7 @@ function solve {
                 For ($number=1;$number -le 9; $number++) {
                     if (isValid $number $row $col $board) {
                         $board[$row][$col] = $number
-                        if (solve $grid) {
+                        if (solve $board) {
                             return $true
                         } else {
                             $board[$row][$col] = 0
